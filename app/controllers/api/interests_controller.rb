@@ -41,7 +41,7 @@ class Api::InterestsController < ApplicationController
     end 
   end 
 
-  def delete 
+  def destroy 
     @interest = Interest.find(params[:id]) 
     @interest.destroy 
     render json: { message: "Successfull deleted" } 

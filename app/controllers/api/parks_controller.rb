@@ -41,7 +41,7 @@ class Api::ParksController < ApplicationController
     end 
   end 
 
-  def delete 
+  def destroy 
     @park = park.find([params[:id]) 
     @park.destroy 
     render json: { message: "Park successfully destroyed" }

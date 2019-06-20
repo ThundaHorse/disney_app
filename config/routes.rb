@@ -13,15 +13,26 @@ Rails.application.routes.draw do
     post '/parks' => 'parks#create'
     get '/parks/:id' => 'parks#show'
     patch '/parks/:id' => 'parks#update'
-    delete '/parks/:id' => 'parks#delete' 
+    delete '/parks/:id' => 'parks#destroy' 
 
     get '/interests' => 'interests#index' 
     post '/interests' => 'interests#create'
     get '/interests/:id' => 'interests#show' 
     patch '/interests/:id' => 'interests#upate' 
-    delete '/interests/:id' => 'interests#delete' 
+    delete '/interests/:id' => 'interests#destroy' 
 
-    
+    get '/attractions' => 'attractions#index' 
+    post '/attractions' => 'attractions#create'
+    get '/attractions/:id' => 'attractions#show' 
+    post '/attractions/:id' => 'attractions#update' 
+    delete '/attractions/:id' => 'attractions#destroy' 
+
+    get '/tickets' => 'tickets#index' 
+    post '/tickets' => 'tickets#create' 
+    get '/tickets/:id' => 'tickets#show' 
+    patch '/tickets/:id' => 'tickets#update' 
+    delete '/tickets/:id' => 'tickets#destroy'
+
 
   end 
 end
