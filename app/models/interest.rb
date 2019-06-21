@@ -1,5 +1,5 @@
 class Interest < ApplicationRecord
-  belongs_to :trip 
+  belongs_to :trips
   belongs_to :attraction 
 
   def formatted_duration 
