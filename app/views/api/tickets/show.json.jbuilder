@@ -1,0 +1,1 @@
+json.partial! @ticket, partial: 'ticket', as: :ticket
