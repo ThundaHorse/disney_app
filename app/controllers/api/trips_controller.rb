@@ -1,5 +1,6 @@
 class Api::TripsController < ApplicationController
-  # before_action :authenticate_user 
+  before_action :authenticate_user 
+  
   def index 
     @trips = Trip.all 
     render 'index.json.jbuilder' 
@@ -9,7 +10,7 @@ class Api::TripsController < ApplicationController
     
     @trip = Trip.new(
                     max_wait_time: params[:max_wait_time], 
-                    user_id: params[:user_id]
+                    user_id: current_user.id
                     )
     if @trip.save 
       render 'show.json.jbuilder'

@@ -1,6 +1,4 @@
 class Api::AttractionsController < ApplicationController
-  # before_action :authenticate_user 
-
   def index 
     @attractions = Attraction.all 
     render 'index.json.jbuilder' 

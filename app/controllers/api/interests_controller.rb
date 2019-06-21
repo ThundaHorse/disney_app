@@ -1,6 +1,4 @@
 class Api::InterestsController < ApplicationController
-  # before_action :authenticate_user 
-
   def index 
     @interests = Interest.all 
     render 'index.json.jbuilder' 

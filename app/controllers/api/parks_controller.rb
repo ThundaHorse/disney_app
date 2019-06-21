@@ -1,6 +1,4 @@
 class Api::ParksController < ApplicationController
-  # before_action :authenticate_user 
-  
   def index 
     @parks = Park.all 
     render 'index.json.jbuilder' 
