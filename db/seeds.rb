@@ -64,3 +64,63 @@
 # Interest.create(trip_id: 1, attraction_id: 5, start_time: Time.zone.parse('2019-06-20 04:15'), duration: 30)
 
 # Ticket.create(park_id: 1, trip_id: 1)
+
+# attractions_to_create = [{
+#   park_id: 1, 
+#   name: "Toy Story Mania!",
+#   status: 0, 
+#   image: "https://www.wdwinfo.com/images/toy-story-mania-new-entrance.jpg",
+#   anticipated_wait_time: 60
+# }, {
+#   park_id: 1, 
+#   name: "Slinky Dog Dash",
+#   status: 0,
+#   image: "http://i3.wp.com/mickeyblog.com/wp-content/uploads/2018/07/Slinky-Dog-Dash-Toy-Story-Land-720x340.jpg",
+#   anticipated_wait_time: 85
+# }
+# ]
+
+# attractions_to_create.each { | attraction| Attraction.create(attraction) }
+attractions_to_update_duration = [{
+                          park_id: 4,
+                          name: "Flight Of Passage",
+                          status: 0,
+                          image: "http://www.wdwinfo.com/wp-content/uploads/2017/05/AVATAR-Flight-of-Passage.jpg",
+                          anticipated_wait_time: 120,
+                          
+                        },
+                        {
+                          park_id: 1,
+                          name: "Rock 'n' Roller Coaster Starring Aerosmith",
+                          status: 0, 
+                          image: "https://www.dadsguidetowdw.com/image-files/rnrc1.jpg",
+                          anticipated_wait_time: 100
+                        },
+                        {
+                          park_id: 2,
+                          name: "Soarin' Around the World",
+                          status: 0,
+                          image: "https://i.ytimg.com/vi/sNtzD34nDVI/maxresdefault.jpg",
+                          anticipated_wait_time: 50 
+                        },
+                        {
+                          park_id: 3,
+                          name: "Space Mountain",
+                          status: 0,
+                          image: "http://www.wdw-magazine.com/wp-content/uploads/2014/11/MOUNTAIN-3-WAYNE.jpg",
+                          anticipated_wait_time: 100
+                        },
+                      {
+                        park_id: 1, 
+                        name: "Toy Story Mania!",
+                        status: 0, 
+                        image: "https://www.wdwinfo.com/images/toy-story-mania-new-entrance.jpg",
+                        anticipated_wait_time: 60
+                      }, {
+                        park_id: 1, 
+                        name: "Slinky Dog Dash",
+                        status: 0,
+                        image: "http://i3.wp.com/mickeyblog.com/wp-content/uploads/2018/07/Slinky-Dog-Dash-Toy-Story-Land-720x340.jpg",
+                        anticipated_wait_time: 85
+                      }]
+
