@@ -1,6 +1,6 @@
 class Interest < ApplicationRecord
-  belongs_to :trips
-  belongs_to :attraction 
+  belongs_to :attraction
+  belongs_to :trip
 
   def formatted_duration 
     hours = duration / 60

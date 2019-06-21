@@ -1,6 +1,7 @@
 class Park < ApplicationRecord
   has_many :tickets 
   has_many :attractions
+  has_many :interests, through: :attractions
 
   def formatted_opening_time 
     opening_time.strftime(' %l:%M %p')

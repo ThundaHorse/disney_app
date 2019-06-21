@@ -1,5 +1,7 @@
 class Attraction < ApplicationRecord
-  belongs_to :park 
+  belongs_to :park
+  has_many :interests
+  
   enum status: [:operational, :maintenance, :closed] 
 
   def formatted_wait_time 

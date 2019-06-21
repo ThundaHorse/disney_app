@@ -2,8 +2,8 @@ class Trip < ApplicationRecord
   belongs_to :user
   has_many :tickets 
   has_many :interests 
-  has_many :attractions, through: :interests 
-  has_many :parks, through: :attractions 
+  has_many :attractions, through: :interests
+  has_many :parks, through: :tickets 
   
   def formatted_wait_time 
     hours = max_wait_time / 60
