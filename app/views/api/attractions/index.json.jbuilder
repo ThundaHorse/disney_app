@@ -1,1 +1,1 @@
-json.array! @attractions, partial: 'attractions', as: :attraction
+json.array! @attractions, partial: 'attraction', as: :attraction

@@ -6,8 +6,8 @@ class Api::TripsController < ApplicationController
   end 
 
   def create 
+    
     @trip = Trip.new(
-                    kids_present: params[:kids_present],
                     max_wait_time: params[:max_wait_time], 
                     user_id: params[:user_id]
                     )
@@ -24,9 +24,9 @@ class Api::TripsController < ApplicationController
   end 
 
   def update 
+
     @trip = Trip.find(params[:id]) 
 
-    @trip.kids_present = params[:kids_present] || @trips.kids_present
     @trip.max_wait_time = params[:max_wait_time] || @trip.max_wait_time
     @trip.user_id = params[:user_id] || @trip.user_id 
 
