@@ -1,4 +1,6 @@
 class Api::TicketsController < ApplicationController
+  before_action :authenticate_user 
+
   def index 
     @tickets = Ticket.all 
     render 'index.json.jbuilder' 

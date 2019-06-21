@@ -4,10 +4,10 @@ class Park < ApplicationRecord
   has_many :interests, through: :attractions
 
   def formatted_opening_time 
-    opening_time.strftime(' %l:%M %p')
+    opening_time.strftime('%l:%M %p ')
   end 
 
   def formatted_closing_time
-    closing_time.strftime(' %l:%M %p') 
+    closing_time.strftime('%l:%M %p ') 
   end 
 end

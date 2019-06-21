@@ -8,8 +8,7 @@ class Api::InterestsController < ApplicationController
     @interest = Interest.new(
                             trip_id: params[:trip_id],
                             attraction_id: params[:attraction_id],
-                            start_time: params[:start_time],
-                            duration: params[:duration]
+                            start_time: params[:start_time]
                             )
     if @interest.save 
       render 'show.json.jbuilder'
@@ -30,7 +29,6 @@ class Api::InterestsController < ApplicationController
     @interest.trip_id = params[:trip_id] || @interest.trip_id
     @interest.attraction_id = params[:attraction_id] || @interest.attraction_id
     @interest.start_time = params[:start_time] || @interest.start_time
-    @interest.duration = params[:duration] || @interest.duration
 
     if @interest.save 
       render 'show.json.jbuilder'
