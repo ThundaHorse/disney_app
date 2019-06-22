@@ -4,7 +4,7 @@ class Attraction < ApplicationRecord
   
   enum status: [:operational, :maintenance, :closed] 
 
-  def formatted_wait_time 
+  def wait_time 
     hours = anticipated_wait_time / 60
     minutes = anticipated_wait_time % 60
     time_string = ""
