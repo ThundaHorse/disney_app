@@ -17,4 +17,12 @@ class Trip < ApplicationRecord
     time_string
   end 
 
+  def arrival
+    arrival_day.strftime('%m/%d/%Y')
+  end 
+
+  def departure 
+    departure_day.strftime('%m/%d/%Y')
+  end 
+
 end

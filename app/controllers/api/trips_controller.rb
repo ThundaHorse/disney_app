@@ -3,7 +3,7 @@ class Api::TripsController < ApplicationController
   
   def index 
     if current_user 
-      @trips = Trip.all.where(user_id: current_user.id)
+      @trips = Trip.where(user_id: current_user.id)
       render 'index.json.jbuilder' 
     else 
       render json: { error: 'Please sign in to view your trips' }

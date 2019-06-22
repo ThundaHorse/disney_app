@@ -3,11 +3,15 @@ class Park < ApplicationRecord
   has_many :attractions
   has_many :interests, through: :attractions
 
-  def formatted_opening_time 
+  def opening 
     opening_time.strftime('%l:%M %p ')
   end 
 
-  def formatted_closing_time
+  def closing
     closing_time.strftime('%l:%M %p ') 
+  end 
+
+  def attractions 
+    Attraction.where(park_id: self.id)
   end 
 end
