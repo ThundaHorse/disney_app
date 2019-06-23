@@ -2,7 +2,7 @@ class Api::TicketsController < ApplicationController
   before_action :authenticate_user 
 
   def index 
-    @tickets = Ticket.all 
+    @tickets = Ticket.where(trip_id: current_user.trips.ids) 
     render 'index.json.jbuilder' 
   end 
 

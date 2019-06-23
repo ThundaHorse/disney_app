@@ -1,6 +1,6 @@
 class Api::InterestsController < ApplicationController
   def index 
-    @interests = Interest.all 
+    @interests = Interest.where(trip_id: Trip.where(user_id: current_user.id)) 
     render 'index.json.jbuilder' 
   end 
 
