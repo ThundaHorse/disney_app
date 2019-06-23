@@ -25,4 +25,16 @@ class Trip < ApplicationRecord
     departure_day.strftime('%m/%d/%Y')
   end 
 
+  def things_to_do 
+    Interest.where(trip_id: self.id)
+  end 
+
+  def things_to_see
+    Attraction.where(id: things_to_do)
+  end 
+
+  def places_to_go
+    Park.where(id: things_to_see)
+  end 
+
 end

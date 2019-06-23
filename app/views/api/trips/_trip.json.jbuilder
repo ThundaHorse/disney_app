@@ -15,3 +15,7 @@ end
 json.parks do 
   json.partial! trip.parks, partial: 'api/parks/park', as: :park
 end 
+
+json.things_to_do trip.things_to_do
+json.things_to_see trip.things_to_see
+json.places_to_go trip.places_to_go

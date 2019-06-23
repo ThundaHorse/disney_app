@@ -388,78 +388,78 @@
 
 # magic_kingdom.each { |ride| Attraction.create(ride) }
 
-animal_kingdom = [{
-  park_id: 4,
-  name: "Expedition Everst - Legend of the Forbidden Mountain",
-  status: 0,
-  image: "https://amp.insider.com/images/5b5b47a5bda1c77c008b45d1-750-563.jpg",
-  anticipated_wait_time: 80
-}, {
-  park_id: 4,
-  name: "Meet Favorite Disney Pals at Adventurers Outpost",
-  status: 0,
-  image: "https://i.ytimg.com/vi/sDYWWaT0jtQ/maxresdefault.jpg",
-  anticipated_wait_time: 45
-}, {
-  park_id: 4,
-  name: "Na'vi River Journey",
-  status: 0,
-  image: "https://cache.undercovertourist.com/media_file/navi-river-journey-124201.jpg",
-  anticipated_wait_time: 110
-}, {
-  park_id: 4,
-  name: "DINOSAUR",
-  status: 0,
-  image: "https://cdn7.wdwnt.com/wp-content/uploads/2019/03/diudiu546551.jpg",
-  anticipated_wait_time: 65
-}, {
-  park_id: 4,
-  name: "It's Tough to be a Bug!",
-  status: 0,
-  image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Its_Tough_to_be_a_Bug_Sign_%282598576385%29.jpg",
-  anticipated_wait_time: 10
-}, {
-  park_id: 4,
-  name: "Kali River Rapids",
-  status: 0,
-  image: "https://www.disneyfanatic.com/wp-content/uploads/2015/07/Kali-620x330.jpg",
-  anticipated_wait_time: 110
-}, {
-  park_id: 4,
-  name: "Kilimanjaro Safaris",
-  status: 0,
-  image: "https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2018/08/kjdfhgjwhriwour53-624x351.jpg",
-  anticipated_wait_time: 55
-}, {
-  park_id: 4,
-  name: "Gorilla Falls Exploration Trail",
-  status: 0,
-  image: "https://www.dadsguidetowdw.com/image-files/xsign-laurie.jpg.pagespeed.ic.336PmAxPE1.jpg",
-  anticipated_wait_time: 0
-}, {
-  park_id: 4,
-  name: "Primeval Whirl",
-  status: 2,
-  image: "http://guide2wdw.com/wp/wp-content/uploads/2013/08/Primeval-Whirl-Animal-Kingdom-Attraction.jpg",
-  anticipated_wait_time: 0
-}, {
-  park_id: 4,
-  name: "The Boneyard",
-  status: 0,
-  image: "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/630/354/75/dam/wdpro-assets/parks-and-tickets/attractions/animal-kingdom/the-boneyard/the-boneyard-00.jpg?1550016166592",
-  anticipated_wait_time: 0
-}, {
-  park_id: 4,
-  name: "TriceraTop Spin",
-  status: 0,
-  image: "https://www.wdwinfo.com/wp-content/uploads/2018/08/tricera-top-spin.jpg",
-  anticipated_wait_time: 20
-}, {
-  park_id: 4,
-  name: "Wildlife Express Train",
-  status: 1,
-  image: "http://www.wdwthemeparks.com/photos-disney/2017/02/24/p-1487993174-WildlifeExpressAfrica16.JPG",
-  anticipated_wait_time: 0
-}]
+# animal_kingdom = [{
+#   park_id: 4,
+#   name: "Expedition Everst - Legend of the Forbidden Mountain",
+#   status: 0,
+#   image: "https://amp.insider.com/images/5b5b47a5bda1c77c008b45d1-750-563.jpg",
+#   anticipated_wait_time: 80
+# }, {
+#   park_id: 4,
+#   name: "Meet Favorite Disney Pals at Adventurers Outpost",
+#   status: 0,
+#   image: "https://i.ytimg.com/vi/sDYWWaT0jtQ/maxresdefault.jpg",
+#   anticipated_wait_time: 45
+# }, {
+#   park_id: 4,
+#   name: "Na'vi River Journey",
+#   status: 0,
+#   image: "https://cache.undercovertourist.com/media_file/navi-river-journey-124201.jpg",
+#   anticipated_wait_time: 110
+# }, {
+#   park_id: 4,
+#   name: "DINOSAUR",
+#   status: 0,
+#   image: "https://cdn7.wdwnt.com/wp-content/uploads/2019/03/diudiu546551.jpg",
+#   anticipated_wait_time: 65
+# }, {
+#   park_id: 4,
+#   name: "It's Tough to be a Bug!",
+#   status: 0,
+#   image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Its_Tough_to_be_a_Bug_Sign_%282598576385%29.jpg",
+#   anticipated_wait_time: 10
+# }, {
+#   park_id: 4,
+#   name: "Kali River Rapids",
+#   status: 0,
+#   image: "https://www.disneyfanatic.com/wp-content/uploads/2015/07/Kali-620x330.jpg",
+#   anticipated_wait_time: 110
+# }, {
+#   park_id: 4,
+#   name: "Kilimanjaro Safaris",
+#   status: 0,
+#   image: "https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2018/08/kjdfhgjwhriwour53-624x351.jpg",
+#   anticipated_wait_time: 55
+# }, {
+#   park_id: 4,
+#   name: "Gorilla Falls Exploration Trail",
+#   status: 0,
+#   image: "https://www.dadsguidetowdw.com/image-files/xsign-laurie.jpg.pagespeed.ic.336PmAxPE1.jpg",
+#   anticipated_wait_time: 0
+# }, {
+#   park_id: 4,
+#   name: "Primeval Whirl",
+#   status: 2,
+#   image: "http://guide2wdw.com/wp/wp-content/uploads/2013/08/Primeval-Whirl-Animal-Kingdom-Attraction.jpg",
+#   anticipated_wait_time: 0
+# }, {
+#   park_id: 4,
+#   name: "The Boneyard",
+#   status: 0,
+#   image: "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/630/354/75/dam/wdpro-assets/parks-and-tickets/attractions/animal-kingdom/the-boneyard/the-boneyard-00.jpg?1550016166592",
+#   anticipated_wait_time: 0
+# }, {
+#   park_id: 4,
+#   name: "TriceraTop Spin",
+#   status: 0,
+#   image: "https://www.wdwinfo.com/wp-content/uploads/2018/08/tricera-top-spin.jpg",
+#   anticipated_wait_time: 20
+# }, {
+#   park_id: 4,
+#   name: "Wildlife Express Train",
+#   status: 1,
+#   image: "http://www.wdwthemeparks.com/photos-disney/2017/02/24/p-1487993174-WildlifeExpressAfrica16.JPG",
+#   anticipated_wait_time: 0
+# }]
 
-animal_kingdom.each { |ride| Attraction.create(ride) }
+# animal_kingdom.each { |ride| Attraction.create(ride) }

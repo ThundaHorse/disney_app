@@ -5,4 +5,6 @@ class Interest < ApplicationRecord
   def formatted_start_time 
     start_time.strftime(' %A, %d %b %Y %l:%M %p')
   end 
+
+  
 end
