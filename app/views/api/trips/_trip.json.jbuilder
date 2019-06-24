@@ -12,10 +12,12 @@ json.attraction do
   json.partial! trip.attractions, partial: 'api/attractions/attraction', as: :attraction  
 end 
 
-json.parks do 
+json.park do 
   json.partial! trip.parks, partial: 'api/parks/park', as: :park
 end 
 
+# json.interests do 
+#   json.partial! trip.interests, partial: 'api/interests/park', as: :park
+# end 
+
 json.things_to_do trip.things_to_do
-json.things_to_see trip.things_to_see
-json.places_to_go trip.places_to_go

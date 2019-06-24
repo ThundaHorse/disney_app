@@ -6,3 +6,8 @@ json.start_time interest.start_time
 json.formatted do 
   json.formatted_start_time interest.formatted_start_time
 end 
+
+interest.attractions_associated.each do |ride| 
+  json.ride ride
+end 
+# json.interested_ride interest.attractions_associated

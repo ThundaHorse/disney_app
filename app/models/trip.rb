@@ -26,15 +26,7 @@ class Trip < ApplicationRecord
   end 
 
   def things_to_do 
-    Interest.where(trip_id: self.id)
-  end 
-
-  def things_to_see
-    Attraction.where(id: things_to_do)
-  end 
-
-  def places_to_go
-    Park.where(id: things_to_see)
+    Interest.where(trip_id: Trip.where(user_id: user.id))
   end 
 
 end
