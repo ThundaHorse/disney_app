@@ -36,4 +36,10 @@ class Api::TicketsController < ApplicationController
     end 
   end 
 
+  def destroy 
+    @ticket = Ticket.find(params[:id])
+    @ticket.destroy 
+    render json: { message: "Successfully Deleted" }
+  end 
+
 end

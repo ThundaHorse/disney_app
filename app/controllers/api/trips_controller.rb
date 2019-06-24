@@ -14,7 +14,9 @@ class Api::TripsController < ApplicationController
     if current_user 
       @trip = Trip.new(
                       max_wait_time: params[:max_wait_time], 
-                      user_id: current_user.id
+                      user_id: current_user.id,
+                      arrival_day: params[:arrival_day],
+                      departure_day: params[:departure_day]
                       )
       if @trip.save 
         render 'show.json.jbuilder'

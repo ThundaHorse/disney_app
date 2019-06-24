@@ -27,6 +27,6 @@ class Trip < ApplicationRecord
 
   def things_to_do 
     Interest.where(trip_id: Trip.where(user_id: user.id))
-  end 
+  end  
 
 end

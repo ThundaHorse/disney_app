@@ -9,5 +9,6 @@ end
 
 interest.attractions_associated.each do |ride| 
   json.ride ride
+  json.park ride.park
 end 
 # json.interested_ride interest.attractions_associated
