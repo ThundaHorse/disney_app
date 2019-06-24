@@ -24,9 +24,4 @@ class Trip < ApplicationRecord
   def departure 
     departure_day.strftime('%m/%d/%Y')
   end 
-
-  def things_to_do 
-    Interest.where(trip_id: Trip.where(user_id: user.id))
-  end  
-
 end

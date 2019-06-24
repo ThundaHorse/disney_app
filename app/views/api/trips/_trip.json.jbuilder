@@ -10,8 +10,12 @@ json.dates do
   json.departure trip.departure
 end 
 
+json.interests do 
+  json.interest trip.interests 
+  json.attraction Attraction.where(id: trip.attraction_ids)
+end 
+
+
 json.park do 
   json.partial! trip.parks, partial: 'api/parks/park', as: :park
 end 
-
-json.things_to_do trip.things_to_do
