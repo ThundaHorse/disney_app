@@ -57,6 +57,7 @@ class Api::TripsController < ApplicationController
   def destroy 
     if current_user 
       @trip = Trip.find(params[:id]) 
+      @trip.interests.each { |int| int.delete }
       @trip.destroy 
       render json: { message: "Successfully deleted trip" }
     else 
