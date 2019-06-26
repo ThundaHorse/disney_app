@@ -1,7 +1,39 @@
 class Api::UsersController < ApplicationController
+  # before_action :authenticate_user
+
   def index 
-    @users = User.all 
-    render 'index.json.jbuilder'
+    if current_user
+      # @users = User.where(id: current_user.id) 
+      @users = User.all
+      render 'index.json.jbuilder'
+    else 
+      render json: { message: "Please log in to view this information" }
+    end 
+  end 
+
+  def show 
+    if current_user 
+      @user = User.find(params[:id])
+      render "show.json.jbuilder"
+    else 
+      render json: { message: "Please log in to view this information" } 
+    end 
+  end 
+
+  def update 
+    @user = User.find(params[:id]) 
+    
+    @user.first_name = params[:first_name] || @user.first_name
+    @user.last_name = params[:last_name] || @user.last_name
+    @user.email = params[:email] || @user.email 
+    @user.phone_number = params[:phone_number] || @user.phone_number
+    @user.image = params[:image] || @user.image 
+
+    if @user.save 
+      render 'show.json.jbuilder'
+    else 
+      render json: { errors: @user.errors.full_messages }
+    end
   end 
 
   def create
