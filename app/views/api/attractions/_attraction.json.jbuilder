@@ -21,4 +21,6 @@ json.trip_interests do
   json.trip_int attraction.interests.find_by(trip_id: current_user.trip_ids)
 end 
 
+json.ints attraction.interests.ids
+
 json.interested false 
