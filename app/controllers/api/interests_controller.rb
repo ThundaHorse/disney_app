@@ -1,5 +1,6 @@
 class Api::InterestsController < ApplicationController
   def index 
+    # @interests = Interest.where(trip_id: Trip.where(user_id: current_user.id)) 
     @interests = Interest.all 
     render 'index.json.jbuilder' 
   end 
@@ -23,7 +24,6 @@ class Api::InterestsController < ApplicationController
   end 
 
   def update 
-    
     @interest = Interest.find(params[:id]) 
     
     @interest.trip_id = params[:trip_id] || @interest.trip_id

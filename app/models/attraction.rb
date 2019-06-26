@@ -22,4 +22,7 @@ class Attraction < ApplicationRecord
     time_string
   end 
 
+  def park
+    Park.where(id: self.park_id)
+  end   
 end
