@@ -10,13 +10,6 @@ attraction.park.each do |parks|
   json.park parks.name
 end 
 
-# json.park do 
-#   json.partial! attraction.park, partial: 'api/parks/park', as: :park
-# end 
-
-# In attraction view, if attraction.interest userid = current id, interested = true
-# From back-end, can make f-end change easier
-
 json.trip_interests do 
   json.trip_int attraction.interests.find_by(trip_id: current_user.trip_ids)
 end 
