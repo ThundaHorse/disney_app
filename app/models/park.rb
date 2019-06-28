@@ -14,4 +14,8 @@ class Park < ApplicationRecord
   def attractions 
     Attraction.where(park_id: self.id)
   end 
+
+  def formatted_for_map
+    address.split(" ").join('+')
+  end 
 end
