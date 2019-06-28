@@ -21,6 +21,10 @@ class Api::ParksController < ApplicationController
 
   def show 
     @park = Park.find(params[:id]) 
+    short_name = @park.name.downcase.split(" ").join("-")
+    request = HTTP.get("https://touringplans.com/#{short_name}/attractions.json")
+    @data = request.parse
+
     render 'show.json.jbuilder'
   end 
 

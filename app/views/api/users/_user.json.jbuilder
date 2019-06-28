@@ -3,4 +3,5 @@ json.first_name user.first_name
 json.last_name user.last_name
 json.email user.email
 json.phone_number user.phone_number
-json.image user.image
+
+json.avatar rails_blob_url(user.avatar) if user.avatar.attachment
