@@ -25,7 +25,10 @@ gem 'sidekiq'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt' 
 gem 'figaro' 
+gem 'whenever', require: false
 gem 'seed_dump'
+
+gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
