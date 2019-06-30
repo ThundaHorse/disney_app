@@ -36,5 +36,7 @@ Rails.application.routes.draw do
     get '/tickets/:id' => 'tickets#show' 
     patch '/tickets/:id' => 'tickets#update' 
     delete '/tickets/:id' => 'tickets#destroy'
+
+    get '/locations/:id' => 'locations#find'
   end 
 end

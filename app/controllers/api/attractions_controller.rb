@@ -1,6 +1,7 @@
 class Api::AttractionsController < ApplicationController
   def index 
     @attractions = Attraction.all 
+    # FirstJobJob.perform_later
     render 'index.json.jbuilder' 
   end 
 

@@ -4,6 +4,7 @@ class Api::UsersController < ApplicationController
   def index 
     # if current_user
       # @users = User.where(id: current_user.id) 
+      # FirstJobJob.perform_later
       @users = User.all
       render 'index.json.jbuilder'
     # else 
@@ -47,17 +48,29 @@ class Api::UsersController < ApplicationController
       avatar: params[:avatar]
     )
 
-    if @user.save
-      render json: { message: 'User created successfully' }, status: :created
-    else
-      render json: { errors: @user.errors.full_messages }, status: :bad_request
-    end
+    respond_to do |format| 
+      if @user.save
+        UserMailer.welcome_email(@user.email).deliver
+        redirect_to(@user, :notice => "User created")
+        format.html { render 'welcome_email.html.erb' }
+        format.json { render 'show.json.jbuilder' }
+        # render json: { message: 'User created successfully' }, status: :created
+      else
+        # render json: { errors: @user.errors.full_messages }, status: :bad_request
+        format.html { render action: 'new' } 
+        format.json { render json: @user.errors.full_messages, status: :unprocessable_entity }
+      end
+    end 
   end
 
   def delete 
     @user = User.find(params[:id])
     @user.delete 
     render json: { message: "Deleted" }
-
   end  
+
+  private 
+  def user_params 
+    params.require(:user).permit(:first_name, :last_name, :email)
+  end 
 end
