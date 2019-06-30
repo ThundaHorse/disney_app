@@ -2,9 +2,9 @@ class FirstJobJob < ApplicationJob
   queue_as :default
   @@count = 0
   
-  after_perform do |job| 
-    self.class.set(:wait => 10.seconds).perform_later(job.arguments.first)
-  end 
+  # after_perform do |job| 
+  #   self.class.set(:wait => 2.minutes).perform_later(job.arguments.first)
+  # end 
 
   def perform(*args)
     puts ""

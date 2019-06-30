@@ -4,7 +4,7 @@ class Api::UsersController < ApplicationController
   def index 
     # if current_user
       # @users = User.where(id: current_user.id) 
-      FirstJobJob.perform_later
+      # FirstJobJob.perform_later
       @users = User.all
       render 'index.json.jbuilder'
     # else 

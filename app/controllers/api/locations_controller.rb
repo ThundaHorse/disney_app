@@ -6,5 +6,6 @@ class Api::LocationsController < ApplicationController
 
     @data = response.parse
     render 'index.json.jbuilder'
-  end  
+  end 
+  
 end
