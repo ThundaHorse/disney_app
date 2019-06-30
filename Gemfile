@@ -27,6 +27,8 @@ gem 'jwt'
 gem 'figaro' 
 gem 'whenever', require: false
 gem 'seed_dump'
+gem 'mail'
+gem 'test_helper'
 
 gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 

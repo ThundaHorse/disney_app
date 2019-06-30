@@ -1,0 +1,10 @@
+<h1>Welcome to Disney Trip Planner! <%= @user.first_name %></h1>
+<p>
+  You have successfully signed up for Disney Trip Planner!
+  <br>
+  Your username is: <%= @signup.email %>.<br>
+</p>
+<p>
+  To login to the site, follow this link: <%= link_to 'trips', @trip %>
+</p>
+<p>Thanks for signing up! Have a magical time!</p>
