@@ -1,0 +1,22 @@
+<div class='wrapper' style='text-align: center;'>
+  <%= image_tag attachments['mickey.png'].url %>
+</div>
+
+<div class='text' style='text-align:center;'>
+  <br>
+  <h1>Welcome to Disney Trip Planner <b><%= @user.first_name %></b>!</h1>
+    <br>
+  <h2>
+    You have successfully signed up for <strong>Disney Trip Planner!</strong>
+    <br>
+    Your username is: <%= @user.email %>.
+    <br>
+  </h2>
+  <h2>
+    To Sign in and view park and attraction info, please visit this link: 
+    <br>
+    <%= link_to 'trips', 'http://localhost:8080/parks' %>
+  </h2>
+    <br>
+  <h1>Have a magical time!</h1>
+</div>

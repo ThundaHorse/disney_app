@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   namespace :api do 
     post '/users' => 'users#create' 
     get '/users' => 'users#index'
+    get '/users/:id' => 'users#show'
+    patch '/users/:id' => 'users#update'
+    delete '/users/:id' => 'users#delete'
     post '/sessions' => 'sessions#create'
 
     get '/trips' => 'trips#index' 
@@ -33,5 +36,9 @@ Rails.application.routes.draw do
     get '/tickets/:id' => 'tickets#show' 
     patch '/tickets/:id' => 'tickets#update' 
     delete '/tickets/:id' => 'tickets#destroy'
+
+    get '/locations/:id' => 'locations#find'
+    
+    get "/*path" => proc { [200, {}, [ActionView::Base.new.render(file: 'public/index.html')]] }
   end 
 end

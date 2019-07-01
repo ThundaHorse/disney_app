@@ -1,5 +1,8 @@
 {
   "name": "disney_app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "cache-manager-fs-binary": "^1.0.4",
+    "themeparks": "^5.1.10"
+  }
 }
