@@ -28,6 +28,7 @@ gem 'figaro'
 gem 'whenever', require: false
 gem 'seed_dump'
 gem 'mail'
+gem "aws-sdk-s3", require: false
 # gem 'test_helper'
 
 # gem 'sqlite3', '~> 1.3', '>= 1.3.11'
