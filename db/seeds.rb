@@ -428,6 +428,35 @@ animal_kingdom = [
   }
 ]
 
+parks_to_create = [
+  {
+    name: 'Hollywood Studios', 
+    opening_time: '9:00 AM',
+    closing_time: '9:00 PM',
+    image: 'https://media2.fdncms.com/orlando/imager/u/original/2409999/1000w_disneyhwoodstudios.jpg',
+    address: '351 S Studio Dr, Lake Buena Vista, FL 32830'
+  }, {
+    name: "Epcot",
+    opening_time: '9:00 AM',
+    closing_time: '9:00 PM',
+    image: 'https://secure.cdn1.wdpromedia.com/resize/mwImage/1/640/360/75/dam/wdpro-assets/gallery/destinations/epcot/epcot-gallery-00.jpg?1537220971715',
+    address: '200 Epcot Center Dr, Orlando, FL 32821'
+  }, {
+    name: "Magic Kingdom", 
+    opening_time: '9:00 AM',
+    closing_time: '10:00 PM',
+    image: '/public/magic_kingdom.png',
+    address: '1180 Seven Seas Dr, Lake Buena Vista, FL 32830'
+  }, {
+    name: "Animal Kingdom", 
+    opening_time: "9:00 AM",
+    closing_time: "10:00 PM",
+    image: "https://cdn7.wdwnt.com/wp-content/uploads/2018/06/Tree-of-Life-the-Stars-990x556.jpg",
+    address: '2901 Osceola Pkwy, Orlando, FL 32830'
+  }
+]
+
+parks_to_create.each { |park| Park.create(park) }
 animal_kingdom.each { |ride| Attraction.create(ride) }
 magic_kingdom.each { |ride| Attraction.create(ride) }
 hollywood.each { |ride| Attraction.create(ride) } 
