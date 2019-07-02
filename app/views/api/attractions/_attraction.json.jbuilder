@@ -17,5 +17,5 @@ end
 json.ints attraction.interests.ids
 json.interested false
 
-json.last_update attraction.updated_at.getlocal.strftime('%m/%d/%Y | %H:%M:%S %p')
+json.last_update attraction.updated_at.getlocal.localtime.strftime('%m/%d/%Y  %I:%M %p')
 # json.last_update attraction.updated_at.strftime('%:z')
