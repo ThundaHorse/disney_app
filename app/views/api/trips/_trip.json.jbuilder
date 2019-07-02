@@ -5,10 +5,10 @@ json.formatted_wait_time trip.formatted_wait_time
 json.arrival_day trip.arrival_day 
 json.departure_day trip.departure_day 
 
-json.dates do 
-  json.arrival trip.arrival
-  json.departure trip.departure
-end 
+# json.dates do 
+#   json.arrival trip.arrival
+#   json.departure trip.departure
+# end 
 
 json.interests do 
   json.interest trip.interests 
