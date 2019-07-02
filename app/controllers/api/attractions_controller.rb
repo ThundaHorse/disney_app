@@ -1,9 +1,8 @@
 class Api::AttractionsController < ApplicationController
-  include WaitHelper
+  # include WaitHelper
 
   def index 
     @attractions = Attraction.all 
-    WaitHelper.UpdateTimes
     # UserSignUpJob.perform_later
 
     render 'index.json.jbuilder' 
