@@ -39,6 +39,6 @@ Rails.application.routes.draw do
 
     get '/locations/:id' => 'locations#find'
     
-    get "/*path" => proc { [200, {}, [ActionView::Base.new.render(file: 'public/index.html')]] }
+    # get "/*path" => proc { [200, {}, [ActionView::Base.new.render(file: 'public/index.html')]] }
   end 
 end
