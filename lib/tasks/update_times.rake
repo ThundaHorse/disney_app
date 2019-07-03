@@ -1,7 +1,5 @@
 require 'rake'
 
-# require_relative '../wait_times/reader.rb'
-
 namespace :update_times do
   desc "Update Attraction wait times"
   
