@@ -29,6 +29,7 @@ gem 'whenever', require: false
 gem 'seed_dump'
 gem 'mail'
 gem "aws-sdk-s3", require: false
+gem 'sqlite3'
 # gem 'test_helper'
 
 # Use ActiveStorage variant
