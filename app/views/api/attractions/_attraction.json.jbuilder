@@ -4,6 +4,7 @@ json.name attraction.name
 json.status attraction.status 
 json.image  attraction.image 
 json.anticipated_wait_time  attraction.anticipated_wait_time
+json.updated_at attraction.updated_at
 
 json.formatted_wait_time attraction.formatted_wait_time
 attraction.park.each do |parks|
