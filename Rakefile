@@ -6,10 +6,10 @@ require_relative 'config/application'
 Rails.application.load_tasks
 
 task :run do
-    ruby "/Users/abrahamkim/Desktop/Disney_capstone/wait_times/reader.rb"
+  ruby "/Users/abrahamkim/Desktop/Disney_capstone/wait_times/reader.rb"
 end
 
 
 task default: :run do
-    puts "Running my Rakefile"
+  puts "Running my Rakefile"
 end
