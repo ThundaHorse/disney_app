@@ -28,7 +28,7 @@ Rails.application.routes.draw do
     get '/attractions' => 'attractions#index' 
     post '/attractions' => 'attractions#create'
     get '/attractions/:id' => 'attractions#show' 
-    post '/attractions/:id' => 'attractions#update' 
+    patch '/attractions/:id' => 'attractions#update' 
     delete '/attractions/:id' => 'attractions#destroy' 
 
     get '/tickets' => 'tickets#index' 
@@ -38,7 +38,6 @@ Rails.application.routes.draw do
     delete '/tickets/:id' => 'tickets#destroy'
 
     get '/locations/:id' => 'locations#find'
-    
-    # get '/communicating' => 'attractions#talking'
   end 
 end
+
