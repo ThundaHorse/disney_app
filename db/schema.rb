@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_27_145754) do
+ActiveRecord::Schema.define(version: 2019_07_04_041837) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,9 @@ ActiveRecord::Schema.define(version: 2019_06_27_145754) do
     t.integer "anticipated_wait_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "duration"
+    t.integer "duration", null: false
+    t.decimal "lat", precision: 10, scale: 6, default: "0.1", null: false
+    t.decimal "lng", precision: 10, scale: 6, default: "0.1", null: false
   end
 
   create_table "interests", force: :cascade do |t|

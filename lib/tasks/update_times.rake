@@ -9,7 +9,7 @@ namespace :themeparks do
     sh 'pushd ~/Desktop/Disney_capstone/wait_times && ruby reader.rb'
   end  
 
-  desc "Broadcast sockets"–
+  desc "Broadcast sockets"
   task :broadcast => :environment do 
     
   end
