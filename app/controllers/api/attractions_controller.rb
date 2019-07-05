@@ -20,7 +20,7 @@ class Api::AttractionsController < ApplicationController
       render json: { message: @attraction.errors.full_messages } 
     end 
   end 
-
+  
   def show 
     @attraction = Attraction.find(params[:id]) 
     ActionCable.server.broadcast "attractions_channel", {
