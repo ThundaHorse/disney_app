@@ -28,7 +28,7 @@ class Api::UsersController < ApplicationController
     @user.last_name = params[:last_name] || @user.last_name
     @user.email = params[:email] || @user.email 
     @user.phone_number = params[:phone_number] || @user.phone_number
-    # @user.avatar = params[:avatar] || @user.avatar
+    @usser.avatar.attach(params[:avatar]) || @user.avatar
 
     if @user.save 
       render 'show.json.jbuilder'
@@ -64,6 +64,6 @@ class Api::UsersController < ApplicationController
 
   private 
   def user_params 
-    params.require(:user).permit(:first_name, :last_name, :email)
+    params.require(:user).permit(:first_name, :last_name, :email, :avatar)
   end 
 end

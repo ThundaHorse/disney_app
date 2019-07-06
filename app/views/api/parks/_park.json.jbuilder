@@ -5,10 +5,10 @@ json.closing_time park.closing_time
 json.address park.address
 json.image park.image 
 
-json.formatted do 
+# json.formatted do 
   json.opening park.opening
   json.closing park.closing
-end 
+# end 
 
 json.attractions park.attractions
 
