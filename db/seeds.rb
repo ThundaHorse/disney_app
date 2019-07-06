@@ -462,3 +462,6 @@ magic_kingdom.each { |ride| Attraction.create(ride) }
 hollywood.each { |ride| Attraction.create(ride) } 
 epcot_attractions.each { |ride| Attraction.create(ride) }
 
+something.all.each do |thing|
+  thing.update(status: 'something')
+end 
