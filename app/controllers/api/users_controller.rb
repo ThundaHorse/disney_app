@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
 
   def index 
     # if current_user
@@ -28,7 +28,7 @@ class Api::UsersController < ApplicationController
     @user.last_name = params[:last_name] || @user.last_name
     @user.email = params[:email] || @user.email 
     @user.phone_number = params[:phone_number] || @user.phone_number
-    @usser.avatar.attach(params[:avatar]) || @user.avatar
+    @user.avatar = params[:avatar] || @user.avatar
 
     if @user.save 
       render 'show.json.jbuilder'
@@ -52,7 +52,7 @@ class Api::UsersController < ApplicationController
       SignUpMailer.creation(@user).deliver_now
       render 'show.json.jbuilder'
     else 
-      render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+      render json: { error: @user.errors.full_messages }, status: :unprocessable_entity
     end 
   end
 
@@ -64,6 +64,6 @@ class Api::UsersController < ApplicationController
 
   private 
   def user_params 
-    params.require(:user).permit(:first_name, :last_name, :email, :avatar)
+    params.require(:user).permit(:first_name, :last_name, :email)
   end 
 end

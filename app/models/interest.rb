@@ -3,7 +3,11 @@ class Interest < ApplicationRecord
   belongs_to :trip
 
   def formatted_start_time 
-    start_time.strftime(' %A, %d %b %Y %l:%M %p')
+    start_time.getlocal.localtime.strftime('%m/%d/%Y  %I:%M %p')
+  end 
+
+  def formatted_update
+    updated_at.getlocal.localtime.strftime('%m/%d/%Y  %I:%M %p')
   end 
 
   def attractions_associated 

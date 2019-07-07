@@ -7,10 +7,7 @@ json.formatted do
   json.formatted_start_time interest.formatted_start_time
 end 
 
-
-# json.attraction interest.attraction 
-# json.park interest.attraction.park 
-
+json.last_update interest.formatted_update
 
 interest.attractions_associated.each do |ride| 
   json.ride ride

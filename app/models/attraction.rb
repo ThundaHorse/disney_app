@@ -22,6 +22,10 @@ class Attraction < ApplicationRecord
     time_string
   end 
 
+  def formatted_update 
+    updated_at.getlocal.localtime.strftime('%m/%d/%Y  %I:%M %p')
+  end 
+
   def park
     Park.where(id: self.park_id)
   end   

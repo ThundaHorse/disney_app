@@ -41,6 +41,8 @@ class Api::TripsController < ApplicationController
     if current_user 
       @trip = Trip.find(params[:id]) 
 
+      @trip.arrival_day = params[:arrival_day] || @trip.arrival_day
+      @trip.departure_day = params[:departure_day] || @trip.departure_day
       @trip.max_wait_time = params[:max_wait_time] || @trip.max_wait_time
       @trip.user_id = current_user.id 
 
