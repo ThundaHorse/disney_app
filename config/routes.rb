@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get '/users/:id' => 'users#show'
     patch '/users/:id' => 'users#update'
     delete '/users/:id' => 'users#delete'
+
     post '/sessions' => 'sessions#create'
 
     get '/trips' => 'trips#index' 
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
     get '/interests' => 'interests#index' 
     post '/interests' => 'interests#create'
     get '/interests/:id' => 'interests#show' 
-    patch '/interests/:id' => 'interests#upate' 
+    patch '/interests/:id' => 'interests#update' 
     delete '/interests/:id' => 'interests#destroy' 
 
     get '/attractions' => 'attractions#index' 

@@ -1,9 +1,8 @@
 class Api::AttractionsController < ApplicationController
   # AttractionUpdateJob.perform_later
   def index 
-    # AttractionUpdateJob.perform_later
-    @attractions = Attraction.all 
-
+    @attractions = Attraction.order('updated_at DESC')
+    
     render 'index.json.jbuilder' 
   end 
 

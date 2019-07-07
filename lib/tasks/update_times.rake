@@ -12,7 +12,7 @@ namespace :themeparks do
   desc "Broadcast sockets"
   task :broadcast => :environment do 
     @attraction = Attraction.all 
-    puts 'starting'
+    # puts 'starting'
     @attraction.each do |attr| 
       # p attr.status 
     ActionCable.server.broadcast "attractions_channel", {
@@ -22,7 +22,7 @@ namespace :themeparks do
         anticipated_wait_time: attr.anticipated_wait_time,
         park_id: attr.park_id
       }
-      puts 'done'
+      # puts 'done'
     end 
   end
   

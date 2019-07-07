@@ -2,7 +2,7 @@ class Attraction < ApplicationRecord
   belongs_to :park
   has_many :interests
   
-  enum status: [:operational, :maintenance, :closed] 
+  enum status: [:Operating, :Down, :Closed] 
 
   def formatted_wait_time 
     hours = anticipated_wait_time / 60

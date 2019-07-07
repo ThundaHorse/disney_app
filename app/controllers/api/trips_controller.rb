@@ -56,7 +56,7 @@ class Api::TripsController < ApplicationController
     end 
   end 
 
-  def destroy 
+  def delete 
     if current_user 
       @trip = Trip.find(params[:id]) 
       @trip.interests.each { |int| int.delete }
