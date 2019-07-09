@@ -1,5 +1,5 @@
 class Api::AttractionsController < ApplicationController
-  # AttractionUpdateJob.perform_later
+  AttractionUpdateJob.perform_later
   def index 
     @attractions = Attraction.order('updated_at DESC')
     

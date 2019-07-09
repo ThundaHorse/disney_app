@@ -12,5 +12,6 @@ class Interest < ApplicationRecord
 
   def attractions_associated 
     Attraction.where(id: attraction_id)
-  end   
+  end
+  
 end

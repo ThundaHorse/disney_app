@@ -5,7 +5,7 @@ class Api::InterestsController < ApplicationController
     render 'index.json.jbuilder' 
   end 
 
-  def create 
+  def create    
     @interest = Interest.new(
                             trip_id: params[:trip_id],
                             attraction_id: params[:attraction_id],

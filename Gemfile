@@ -30,6 +30,8 @@ gem 'mail'
 gem "aws-sdk-s3", require: false
 gem 'sqlite3'
 gem 'rails-controller-testing'
+gem 'twilio-ruby'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

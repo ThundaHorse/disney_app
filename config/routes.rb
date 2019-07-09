@@ -26,6 +26,8 @@ Rails.application.routes.draw do
     patch '/interests/:id' => 'interests#update' 
     delete '/interests/:id' => 'interests#destroy' 
 
+    get '/twilio' => 'twilio#text'
+
     get '/attractions' => 'attractions#index' 
     post '/attractions' => 'attractions#create'
     get '/attractions/:id' => 'attractions#show' 
