@@ -32,6 +32,8 @@ gem 'sqlite3'
 gem 'rails-controller-testing'
 gem 'twilio-ruby'
 
+gem 'simplecov', require: false, group: :test
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

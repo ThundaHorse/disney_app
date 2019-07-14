@@ -1,4 +1,6 @@
 require 'rails_helper' 
+require 'simplecov'
+SimpleCov.start
 
 RSpec.describe User, type: :model do 
   describe "Verifies a user has an email" do 
@@ -10,18 +12,18 @@ RSpec.describe User, type: :model do
     end 
   end 
 
-  describe "Verifies a user has a first name, last name, and phone number" do
-    it "should not save a user without a first name, last name, or phone number" do
+  describe "Verifies a user has a first name, last name, phone number, and email" do
+    it "should save a user with a first name, last name, phone number, and email" do
       user = User.new 
-      user.first_name = '' 
-      user.last_name = ''
-      user.phone_number = '' 
+      user.first_name = 'Test' 
+      user.last_name = 'Test'
+      user.email = 'test@test.com'
+      user.phone_number = '000-000-0000' 
+      user.save 
 
-      user.valid? 
-      user.errors[:first_name].should_not include('')
-      user.errors[:last_name].should_not include('')
-      user.errors[:phone_number].should_not include('')
+      expect(user).to eq(user)
     end 
   end 
 end 
+
 
