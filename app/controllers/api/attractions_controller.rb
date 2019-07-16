@@ -73,4 +73,10 @@ class Api::AttractionsController < ApplicationController
     }
     render json: {}
   end 
+
+  def epcot_rides
+    request = HTTP.get("https://touringplans.com/epcot/attractions.json")
+    
+    render request
+  end 
 end

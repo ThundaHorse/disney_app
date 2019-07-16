@@ -482,9 +482,56 @@
 # dumbo lat: 28.42039, lng: -81.58102
 
 
-Attraction.find(23).update(lat: 28.4204315, lng: -81.5826344) 
-Attraction.find(25).update(lat: 28.4200182, lng: -81.5831964)
-Attraction.find(27).update(lat: 28.4200182, lng: -81.5831964)
-Attraction.find(26).update(lat: 28.4167515, lng: -81.5830075)
-Attraction.find(32).update(lat: 28.42039, lng: -81.58102)
+# Attraction.find(23).update(lat: 28.4204315, lng: -81.5826344) 
+# Attraction.find(25).update(lat: 28.4200182, lng: -81.5831964)
+# Attraction.find(27).update(lat: 28.4200182, lng: -81.5831964)
+# Attraction.find(26).update(lat: 28.4167515, lng: -81.5830075)
+# Attraction.find(32).update(lat: 28.42039, lng: -81.58102)
 
+attractions_epcot_shorts = [
+  {"name":"Agent P's World Showcase Adventure","short_name":"Agent P's Adv","permalink":"agent-ps-world-showcase-adventure"},
+  {"name":"Alberta Bound","short_name":"Alberta Bound","permalink":"alberta-bound"},
+  {"name":"The American Adventure","short_name":"American Adv","permalink":"american-adventure"},
+  {"name":"Beauty and the Beast Sing-Along","short_name":"Beauty and the Beast","permalink":"beauty-beast-sing-along"},
+  {"name":"British Revolution","short_name":"British Revolution","permalink":"the-british-revolution"},
+  {"name":"Candlelight Processional","short_name":"Candlelight Processional","permalink":"candlelight-processional"},
+  {"name":"Disney & Pixar Short Film Festival","short_name":"Short Films","permalink":"movie-preview"},
+  {"name":"Disney on Broadway Concert Series","short_name":"Disney on Broadway","permalink":"disney-on-broadway-concert"},
+  {"name":"Frozen Ever After","short_name":"Frozen Ever After","permalink":"frozen-ever-after"},
+  {"name":"Garden Rocks Concert Series","short_name":"Garden Rocks Concert","permalink":"garden-rocks-concert-series"},
+  {"name":"Gran Fiesta Tour Starring The Three Caballeros","short_name":"Gran Fiesta Tour","permalink":"gran-fiesta-tour-starring-the-three-caballeros"},{"name":"The Guardians of the Galaxy – Awesome Mix Live!","short_name":"Awesome Mix Live","permalink":"guardians-galaxy-awesome-mix-live"},{"name":"IllumiNations: Reflections of Earth","short_name":"IllumiNations","permalink":"illuminations-reflections-of-earth"},
+  {"name":"Impressions de France","short_name":"Impress de France","permalink":"impressions-de-france"},
+  {"name":"JAMMitors","short_name":"JAMMitors","permalink":"jammitors"},
+  {"name":"The Jeweled Dragon Acrobats","short_name":"Dragon Acrobats","permalink":"jeweled-dragon-acrobats"},
+  {"name":"Journey Into Imagination With Figment","short_name":"Jrny Imagination","permalink":"journey-into-imagination-with-figment"},
+  {"name":"Living with the Land","short_name":"Living w/ Land","permalink":"living-with-the-land"},
+  {"name":"Margret Almer & The Bavarian Band","short_name":"Bavarian Band","permalink":"margret-almer-bavarian-band"},
+  {"name":"Mariachi Cobre","short_name":"Mariachi Cobre","permalink":"mariachi-cobre"},
+  {"name":"Matboukha Groove","short_name":"Matboukha Groove","permalink":"matboukha-groove"},
+  {"name":"Matsuriza","short_name":"Matsuriza","permalink":"matsuriza"},
+  {"name":"Meet Anna and Elsa at Royal Sommerhus","short_name":"Anna & Elsa Greeting","permalink":"royal-sommerhus"},
+  {"name":"Meet Disney Pals at the Epcot Character Spot","short_name":"Character Spot","permalink":"epcot-character-spot"},
+  {"name":"Mission: SPACE Green","short_name":"Msn: SPACE Green","permalink":"mission-space-green"},
+  {"name":"Mission: SPACE Orange","short_name":"Msn: SPACE Orange","permalink":"mission-space-orange"},
+  {"name":"Musique Aramenco","short_name":"Musique Aramenco","permalink":"musique-aramenco"},
+  {"name":"O Canada!","short_name":"O Canada!","permalink":"o-canada"},
+  {"name":"Raffy","short_name":"Raffy","permalink":"raffy"},
+  {"name":"Reflections of China","short_name":"Reflections of China","permalink":"reflections-of-china"},
+  {"name":"Rose & Crown Pub Musician","short_name":"R&C Pub Musician","permalink":"rose-crown-pub-musician"},
+  {"name":"The Seas Main Tank and Exhibits","short_name":"The Seas Main Tank","permalink":"the-seas-main-tank-and-exhibits"},
+  {"name":"The Seas with Nemo & Friends","short_name":"Seas with Nemo","permalink":"seas-with-nemo-friends"},
+  {"name":"Sergio","short_name":"Sergio","permalink":"sergio"},
+  {"name":"Serveur Amusant","short_name":"Serveur Amusant","permalink":"serveur-amusant"},
+  {"name":"Soarin'","short_name":"Soarin'","permalink":"soarin"},
+  {"name":"Spaceship Earth","short_name":"Spaceship Earth","permalink":"spaceship-earth"},
+  {"name":"Test Track","short_name":"Test Track","permalink":"test-track"},
+  {"name":"Turtle Talk with Crush","short_name":"Turtle Talk","permalink":"turtle-talk-with-crush"},
+  {"name":"Voices of Liberty","short_name":"Voices of Liberty","permalink":"voices-of-liberty"}
+]
+
+attractions_epcot_shorts.each do |hash| 
+  Attraction.where(name: hash['name']).each do |ride| 
+    ride.update(short_name: hash['permalink'])
+    ride.save
+  end 
+end 

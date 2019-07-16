@@ -29,6 +29,7 @@ Rails.application.routes.draw do
     get '/twilio' => 'twilio#text'
 
     get '/attractions' => 'attractions#index' 
+    get '/attractions/epcot' => 'attractions#epcot_rides'
     post '/attractions' => 'attractions#create'
     get '/attractions/:id' => 'attractions#show' 
     patch '/attractions/:id' => 'attractions#update' 

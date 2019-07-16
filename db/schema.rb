@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_06_053557) do
+ActiveRecord::Schema.define(version: 2019_07_16_064607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2019_07_06_053557) do
     t.integer "duration", null: false
     t.decimal "lat", precision: 10, scale: 6, default: "0.1", null: false
     t.decimal "lng", precision: 10, scale: 6, default: "0.1", null: false
+    t.string "short_name"
   end
 
   create_table "interests", force: :cascade do |t|
