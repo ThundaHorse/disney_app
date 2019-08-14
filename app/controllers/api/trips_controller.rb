@@ -1,13 +1,14 @@
 class Api::TripsController < ApplicationController
-  before_action :authenticate_user 
+  # before_action :authenticate_user 
   
   def index 
-    if current_user 
-      @trips = Trip.where(user_id: current_user.id)
+    # if current_user 
+      # @trips = Trip.where(user_id: current_user.id)
+      @trips = Trip.all
       render 'index.json.jbuilder' 
-    else 
-      render json: { error: 'Please sign in to view your trips' }
-    end 
+    # else 
+      # render json: { error: 'Please sign in to view your trips' }
+    # end 
   end 
 
   def create 
