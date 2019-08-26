@@ -17,3 +17,4 @@ json.ints attraction.interests.ids
 json.interested false
 
 json.last_update attraction.formatted_update
+

@@ -1,5 +1,6 @@
 class Api::AttractionsController < ApplicationController
   AttractionUpdateJob.perform_later
+
   def index 
     @attractions = Attraction.order('updated_at DESC')
     
@@ -31,6 +32,7 @@ class Api::AttractionsController < ApplicationController
         park_id: @attraction.park_id
       }
     render 'show.json.jbuilder' 
+    # render "test.html.erb"
   end 
 
   def update 
